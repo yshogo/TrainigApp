@@ -16,9 +16,7 @@ class CalendarCellViewController:UICollectionViewCell{
     var dateNum:String?
     var power:String?
     
-    /// コンストラクタ
-    ///
-    /// - Parameter aDecoder: <#aDecoder description#>
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     

@@ -57,7 +57,6 @@ class DateManager {
     
     //表示するセルの数を返す
     public func daysAcquisition() -> Int{
-        
         //始点から終点の日数
         return calendar.dateComponents([.day], from:startDay ,to:endDay).day! + 1
     }

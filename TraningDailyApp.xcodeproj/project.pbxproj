@@ -19,6 +19,7 @@
 		1958C4811E7E5A2D00306D1F /* CalendarCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1958C4801E7E5A2D00306D1F /* CalendarCellViewController.swift */; };
 		1958C4831E7E5AF600306D1F /* CalendarCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1958C4821E7E5AF600306D1F /* CalendarCollectionDataSource.swift */; };
 		199C00621E7E8ADD0004727A /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C00611E7E8ADD0004727A /* DateManager.swift */; };
+		199C00641E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C00631E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		1958C4801E7E5A2D00306D1F /* CalendarCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCellViewController.swift; sourceTree = "<group>"; };
 		1958C4821E7E5AF600306D1F /* CalendarCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionDataSource.swift; sourceTree = "<group>"; };
 		199C00611E7E8ADD0004727A /* DateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		199C00631E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainigInfoTableViewDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			children = (
 				1958C4461E7E552100306D1F /* AppDelegate.swift */,
 				1958C4821E7E5AF600306D1F /* CalendarCollectionDataSource.swift */,
+				199C00631E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift */,
 			);
 			name = delegate;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				1958C47F1E7E584500306D1F /* DailyViewController.swift in Sources */,
 				1958C4831E7E5AF600306D1F /* CalendarCollectionDataSource.swift in Sources */,
 				1958C44F1E7E552100306D1F /* TraningDailyApp.xcdatamodeld in Sources */,
+				199C00641E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
