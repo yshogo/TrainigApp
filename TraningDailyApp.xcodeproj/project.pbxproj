@@ -21,6 +21,7 @@
 		199C00621E7E8ADD0004727A /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C00611E7E8ADD0004727A /* DateManager.swift */; };
 		199C00641E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C00631E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift */; };
 		19A611FD1E822B190045B6B9 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A611FC1E822B190045B6B9 /* PostViewController.swift */; };
+		19A612011E82B8140045B6B9 /* DateToStringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A612001E82B8140045B6B9 /* DateToStringUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		199C00611E7E8ADD0004727A /* DateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		199C00631E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainigInfoTableViewDataSource.swift; sourceTree = "<group>"; };
 		19A611FC1E822B190045B6B9 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		19A612001E82B8140045B6B9 /* DateToStringUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateToStringUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		1958C4451E7E552100306D1F /* TraningDailyApp */ = {
 			isa = PBXGroup;
 			children = (
+				19A611FE1E82B7E80045B6B9 /* utils */,
 				199C00601E7E8AAE0004727A /* managers */,
 				1958C47B1E7E57DD00306D1F /* db */,
 				1958C47A1E7E57CD00306D1F /* delegate */,
@@ -192,6 +195,14 @@
 				199C00611E7E8ADD0004727A /* DateManager.swift */,
 			);
 			name = managers;
+			sourceTree = "<group>";
+		};
+		19A611FE1E82B7E80045B6B9 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				19A612001E82B8140045B6B9 /* DateToStringUtil.swift */,
+			);
+			name = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +351,7 @@
 				1958C4831E7E5AF600306D1F /* CalendarCollectionDataSource.swift in Sources */,
 				1958C44F1E7E552100306D1F /* TraningDailyApp.xcdatamodeld in Sources */,
 				199C00641E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift in Sources */,
+				19A612011E82B8140045B6B9 /* DateToStringUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
