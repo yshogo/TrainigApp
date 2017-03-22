@@ -20,6 +20,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //指定されたIdentifyに画面遷移する
+    public func next(indentify:String){
+        let targetViewController = self.storyboard!.instantiateViewController( withIdentifier:  indentify)
+        self.present( targetViewController, animated: true, completion: nil)
+    }
 
 }
 

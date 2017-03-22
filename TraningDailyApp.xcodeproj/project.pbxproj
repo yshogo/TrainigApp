@@ -20,6 +20,7 @@
 		1958C4831E7E5AF600306D1F /* CalendarCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1958C4821E7E5AF600306D1F /* CalendarCollectionDataSource.swift */; };
 		199C00621E7E8ADD0004727A /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C00611E7E8ADD0004727A /* DateManager.swift */; };
 		199C00641E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C00631E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift */; };
+		19A611FD1E822B190045B6B9 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A611FC1E822B190045B6B9 /* PostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		1958C4821E7E5AF600306D1F /* CalendarCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionDataSource.swift; sourceTree = "<group>"; };
 		199C00611E7E8ADD0004727A /* DateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		199C00631E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainigInfoTableViewDataSource.swift; sourceTree = "<group>"; };
+		19A611FC1E822B190045B6B9 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				1958C4481E7E552100306D1F /* ViewController.swift */,
 				1958C47E1E7E584500306D1F /* DailyViewController.swift */,
 				1958C4801E7E5A2D00306D1F /* CalendarCellViewController.swift */,
+				19A611FC1E822B190045B6B9 /* PostViewController.swift */,
 			);
 			name = viewcontroller;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19A611FD1E822B190045B6B9 /* PostViewController.swift in Sources */,
 				199C00621E7E8ADD0004727A /* DateManager.swift in Sources */,
 				1958C4811E7E5A2D00306D1F /* CalendarCellViewController.swift in Sources */,
 				1958C4491E7E552100306D1F /* ViewController.swift in Sources */,

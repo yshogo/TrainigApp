@@ -18,7 +18,8 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
     //クリックされたときのイベントメソッド
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        print(indexPath.row)
+        //画面遷移させる
+        delegate?.next(indentify: "postViewController")
     }
     
     //Cellの合計数
