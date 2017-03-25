@@ -22,6 +22,7 @@
 		199C00641E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C00631E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift */; };
 		19A611FD1E822B190045B6B9 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A611FC1E822B190045B6B9 /* PostViewController.swift */; };
 		19A612011E82B8140045B6B9 /* DateToStringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A612001E82B8140045B6B9 /* DateToStringUtil.swift */; };
+		19E74CBD1E867E6100B9AEB7 /* TrainigMenuTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E74CBC1E867E6100B9AEB7 /* TrainigMenuTableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		199C00631E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainigInfoTableViewDataSource.swift; sourceTree = "<group>"; };
 		19A611FC1E822B190045B6B9 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		19A612001E82B8140045B6B9 /* DateToStringUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateToStringUtil.swift; sourceTree = "<group>"; };
+		19E74CBC1E867E6100B9AEB7 /* TrainigMenuTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainigMenuTableViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		1958C4771E7E578800306D1F /* views */ = {
 			isa = PBXGroup;
 			children = (
+				19E74CBB1E867CC100B9AEB7 /* cells */,
 				1958C4791E7E57B000306D1F /* storyboards */,
 				1958C4781E7E579700306D1F /* viewcontroller */,
 			);
@@ -156,7 +159,6 @@
 			children = (
 				1958C4481E7E552100306D1F /* ViewController.swift */,
 				1958C47E1E7E584500306D1F /* DailyViewController.swift */,
-				1958C4801E7E5A2D00306D1F /* CalendarCellViewController.swift */,
 				19A611FC1E822B190045B6B9 /* PostViewController.swift */,
 			);
 			name = viewcontroller;
@@ -177,6 +179,7 @@
 				1958C4461E7E552100306D1F /* AppDelegate.swift */,
 				1958C4821E7E5AF600306D1F /* CalendarCollectionDataSource.swift */,
 				199C00631E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift */,
+				19E74CBC1E867E6100B9AEB7 /* TrainigMenuTableViewDelegate.swift */,
 			);
 			name = delegate;
 			sourceTree = "<group>";
@@ -203,6 +206,14 @@
 				19A612001E82B8140045B6B9 /* DateToStringUtil.swift */,
 			);
 			name = utils;
+			sourceTree = "<group>";
+		};
+		19E74CBB1E867CC100B9AEB7 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				1958C4801E7E5A2D00306D1F /* CalendarCellViewController.swift */,
+			);
+			name = cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +362,7 @@
 				1958C4831E7E5AF600306D1F /* CalendarCollectionDataSource.swift in Sources */,
 				1958C44F1E7E552100306D1F /* TraningDailyApp.xcdatamodeld in Sources */,
 				199C00641E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift in Sources */,
+				19E74CBD1E867E6100B9AEB7 /* TrainigMenuTableViewDelegate.swift in Sources */,
 				19A612011E82B8140045B6B9 /* DateToStringUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
