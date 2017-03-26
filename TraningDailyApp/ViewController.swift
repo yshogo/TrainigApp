@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController , UITextFieldDelegate{
+    
+    var textFieldDelegate:UIViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,12 @@ class ViewController: UIViewController {
     public func next(indentify:String){
         let targetViewController = self.storyboard!.instantiateViewController( withIdentifier:  indentify)
         self.present( targetViewController, animated: true, completion: nil)
+    }
+    
+    //テキストビューでRetutnキーの入力後にキーボードを閉じる
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
 }

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E01055BA418C83C6B0EA4CA820003F5E0A31FA22",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "27B92D82EDBC2A30EEAFE070B383390C08D1DFD6" : 9223372036854775807,
+    "E01055BA418C83C6B0EA4CA820003F5E0A31FA22" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CC47DF5D-4C68-40F3-8153-0AB8E44EF9D6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "27B92D82EDBC2A30EEAFE070B383390C08D1DFD6" : "",
+    "E01055BA418C83C6B0EA4CA820003F5E0A31FA22" : "TraningDailyApp\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TraningDailyApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TraningDailyApp.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ShogoYamada\/Swift-TableViewSample.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "27B92D82EDBC2A30EEAFE070B383390C08D1DFD6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/gitlab.com\/yamada1993\/TrainingApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E01055BA418C83C6B0EA4CA820003F5E0A31FA22"
+    }
+  ]
+}

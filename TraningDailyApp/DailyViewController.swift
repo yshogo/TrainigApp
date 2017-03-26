@@ -15,6 +15,7 @@ class DailyViewController:ViewController{
     
     @IBOutlet weak var callendarCollectionView: UICollectionView!
     @IBOutlet weak var trainingTableView: UITableView!
+    @IBOutlet weak var calendaeHeader: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,9 @@ class DailyViewController:ViewController{
         
         callendarCollectionView.dataSource = calledarDataSource
         callendarCollectionView.delegate = calledarDataSource
+        
+        //ヘッダーに月を表示する
+        calendaeHeader.text = calledarDataSource?.selectMonth()
     }
     
     //TableViewの初期設定
@@ -47,4 +51,17 @@ class DailyViewController:ViewController{
         
     }
     
+    //次の月の表示ボタン
+    @IBAction func nextButtonEvent(_ sender: Any) {
+        calledarDataSource?.nextMonth()
+        callendarCollectionView.reloadData()
+        calendaeHeader.text = calledarDataSource?.selectMonth()
+    }
+    
+    //前の月の表示ボタン
+    @IBAction func beforeButtonEvent(_ sender: Any) {
+        calledarDataSource?.beforeMonth()
+        callendarCollectionView.reloadData()
+        calendaeHeader.text = calledarDataSource?.selectMonth()
+    }
 }

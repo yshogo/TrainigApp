@@ -92,6 +92,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1910DE311E868D7A00884352 /* tableView */ = {
+			isa = PBXGroup;
+			children = (
+				199C00631E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift */,
+				19E74CBC1E867E6100B9AEB7 /* TrainigMenuTableViewDelegate.swift */,
+			);
+			name = tableView;
+			sourceTree = "<group>";
+		};
+		1910DE321E868D9100884352 /* collectionView */ = {
+			isa = PBXGroup;
+			children = (
+				1958C4821E7E5AF600306D1F /* CalendarCollectionDataSource.swift */,
+			);
+			name = collectionView;
+			sourceTree = "<group>";
+		};
+		1910DE331E868DAC00884352 /* pickerView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = pickerView;
+			sourceTree = "<group>";
+		};
 		1958C43A1E7E552100306D1F = {
 			isa = PBXGroup;
 			children = (
@@ -176,10 +200,10 @@
 		1958C47A1E7E57CD00306D1F /* delegate */ = {
 			isa = PBXGroup;
 			children = (
+				1910DE331E868DAC00884352 /* pickerView */,
+				1910DE321E868D9100884352 /* collectionView */,
+				1910DE311E868D7A00884352 /* tableView */,
 				1958C4461E7E552100306D1F /* AppDelegate.swift */,
-				1958C4821E7E5AF600306D1F /* CalendarCollectionDataSource.swift */,
-				199C00631E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift */,
-				19E74CBC1E867E6100B9AEB7 /* TrainigMenuTableViewDelegate.swift */,
 			);
 			name = delegate;
 			sourceTree = "<group>";

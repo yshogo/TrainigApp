@@ -18,12 +18,7 @@ class DateManager {
     var endDay = Date()
     //現在のカレンダーを取得
     var calendar = Calendar.current
-    
-    init() {
-        startDay = beginOfMonth()
-        endDay = endOfMonth()
-    }
-    
+
     //月カレンダーのはじめの月を設定する
     private func beginOfMonth() -> Date{
         
@@ -48,7 +43,7 @@ class DateManager {
         return calendar.date(byAdding: .day, value: 7-dayOfWeek, to: nextmonth!)!
     }
     
-    //カレンダーの始点から指定した日数で加算しれ日付を返す
+    //カレンダーの始点から指定した日数で加算し日付を返す
     public func conversionDateFormat(index: Int) -> String{
         
         let currentday = calendar.date(byAdding: .day,value:index,to: startDay)
@@ -57,7 +52,29 @@ class DateManager {
     
     //表示するセルの数を返す
     public func daysAcquisition() -> Int{
+        
+        startDay = beginOfMonth()
+        endDay = endOfMonth()
+        
         //始点から終点の日数
         return calendar.dateComponents([.day], from:startDay ,to:endDay).day! + 1
+    }
+    
+    //SelectDayを1か月進ませる
+    public func nextMonthCalendar(){
+        selectDay = calendar.date(byAdding: .month, value: 1, to: selectDay)!
+    }
+    
+    //SelectDayを1日戻す
+    public func preDayCalendar(){
+        selectDay = calendar.date(byAdding: .month, value: -1, to: selectDay)!
+    }
+    
+    //選択されている月を返す
+    public func calendarHeader()->String{
+        let formatter = DateFormatter()
+        formatter.dateFormat = "YYYY/MM"
+        
+        return formatter.string(from: selectDay)
     }
 }
