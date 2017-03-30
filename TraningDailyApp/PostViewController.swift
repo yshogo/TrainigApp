@@ -19,14 +19,17 @@ class PostViewController:ViewController{
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var numTextField: UITextField!
     
+    //カレンダー画面からデータを取得したときにセットされる日付
+    var transitionDate:String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         initDataSource()
         
         //DatePikerの初期設定(仮で今日の日づけを設定する)
-        datePickerField.placeholder = DateToStringUtil.dateToString(date: NSDate())
-        datePickerField.text = DateToStringUtil.dateToString(date: NSDate())
+        datePickerField.placeholder = transitionDate
+        datePickerField.text = transitionDate
         self.view.addSubview(datePickerField)
         
         //DatePickerを生成する
@@ -48,7 +51,6 @@ class PostViewController:ViewController{
         //重量入力のテキストフィールドと数量の入力のテキストフィールド
         weightTextField.delegate = self
         numTextField.delegate = self
-        
     }
     
     

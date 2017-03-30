@@ -14,12 +14,24 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
     var dataSource: DailyViewController?
     
     var dateManager = DateManager()
-    
+        
     //クリックされたときのイベントメソッド
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        //画面遷移させる
-        delegate?.next(indentify: "postViewController")
+        let targetViewController = delegate?.storyboard!.instantiateViewController( withIdentifier:  "postViewController") as? PostViewController
+        
+        let cell = collectionView.cellForItem(at: indexPath) as! CalendarCellViewController
+    
+        var cellText = cell.dateNumLabel.text
+        
+        if (cellText?.characters.count)! < 2{
+            cellText = "0" + cellText!
+        }
+        
+        let fullDate = selectMonth(format: "YYYY/MM") + "/" + cellText!
+        targetViewController?.transitionDate = fullDate
+        
+        delegate?.present( targetViewController!, animated: true, completion: nil)
     }
     
     //Cellの合計数
@@ -33,7 +45,7 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         //セルを取得
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dateCell", for: indexPath) as! CalendarCellViewController
+        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dateCell", for: indexPath) as! CalendarCellViewController
         cell.dateNumLabel.text = dateManager.conversionDateFormat(index: indexPath.row)
         
         return cell
@@ -50,7 +62,7 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
     }
     
     //選択されている月を返す
-    public func selectMonth() -> String{
-        return dateManager.calendarHeader()
+    public func selectMonth(format:String) -> String{
+        return dateManager.calendarHeader(format: format)
     }
 }

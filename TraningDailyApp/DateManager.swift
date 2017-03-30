@@ -71,9 +71,10 @@ class DateManager {
     }
     
     //選択されている月を返す
-    public func calendarHeader()->String{
+    //引数は必ずdateのformatを指定すること!!!!!!!
+    public func calendarHeader(format:String)->String{
         let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY/MM"
+        formatter.dateFormat = format
         
         return formatter.string(from: selectDay)
     }

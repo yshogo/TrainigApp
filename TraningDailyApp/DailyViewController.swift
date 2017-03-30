@@ -36,7 +36,7 @@ class DailyViewController:ViewController{
         callendarCollectionView.delegate = calledarDataSource
         
         //ヘッダーに月を表示する
-        calendaeHeader.text = calledarDataSource?.selectMonth()
+        calendaeHeader.text = calledarDataSource?.selectMonth(format: "YYYY/MM")
     }
     
     //TableViewの初期設定
@@ -51,17 +51,18 @@ class DailyViewController:ViewController{
         
     }
     
+    
     //次の月の表示ボタン
     @IBAction func nextButtonEvent(_ sender: Any) {
         calledarDataSource?.nextMonth()
         callendarCollectionView.reloadData()
-        calendaeHeader.text = calledarDataSource?.selectMonth()
+        calendaeHeader.text = calledarDataSource?.selectMonth(format: "YYYY/MM")
     }
     
     //前の月の表示ボタン
     @IBAction func beforeButtonEvent(_ sender: Any) {
         calledarDataSource?.beforeMonth()
         callendarCollectionView.reloadData()
-        calendaeHeader.text = calledarDataSource?.selectMonth()
+        calendaeHeader.text = calledarDataSource?.selectMonth(format: "YYYY/MM")
     }
 }
