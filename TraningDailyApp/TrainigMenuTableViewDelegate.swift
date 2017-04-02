@@ -14,6 +14,8 @@ class TrainigMenuTableViewDelegate: NSObject,UITableViewDataSource,UITableViewDe
     var dataSource:PostViewController!
     var trainingArray:[String]! = ["ベンチプレス","ダンベルプレス"]
     
+    private var trainingMenu:String?
+    
     
     ///必要なTableViewのメソッド
     ///セルの行数追加
@@ -35,9 +37,12 @@ class TrainigMenuTableViewDelegate: NSObject,UITableViewDataSource,UITableViewDe
     
     ///セルをタップしたときのクリックイベント
     func tableView(_ tableView: UITableView, didSelectRowAtIndexPath IndexPath:NSIndexPath) {
-        
-        ///コンソールにクリックしたテキストを印字する
-        print("ok")
+        trainingMenu = trainingArray[IndexPath.row]
+    }
+    
+    //選択されたデータを返す
+    public func getSelectMenu() -> String{
+        return self.trainingMenu!
     }
 
 }

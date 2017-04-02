@@ -113,4 +113,20 @@ class PostViewController:ViewController{
     private func refreshTableView(){
         tabelView.reloadData()
     }
+    
+    //投稿ボタンをクリックしたときのイベント
+    @IBAction func postEvent(_ sender: Any) {
+        
+        //データ取得する
+        let date = datePickerField.text
+        let trainingMenu = trainigMenuTableViewDelegate?.getSelectMenu()
+        let weight = weightTextField.text
+        let num = numTextField.text
+        
+        let data = TrainigData(date: date!, trainigMenu: trainingMenu!, weight: weight!, num: num!)
+        
+        let dao = TraingDataDao()
+        dao.saveData(data: data)
+    }
+    
 }
