@@ -6,7 +6,13 @@
          contextName = "CalendarCollectionDataSource.collectionView(UICollectionView, cellForItemAt : IndexPath) -&gt; UICollectionViewCell:CalendarCollectionDataSource.swift">
          <PersistentStrings>
             <PersistentString
+               value = "getDate(collectionView: collectionView, indexPath: indexPath)">
+            </PersistentString>
+            <PersistentString
                value = "cell">
+            </PersistentString>
+            <PersistentString
+               value = "row.date">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
