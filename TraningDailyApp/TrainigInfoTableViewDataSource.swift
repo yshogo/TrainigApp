@@ -10,11 +10,12 @@ import UIKit
 
 class TrainigInfoTableViewDataSource: NSObject,UITableViewDataSource,UITableViewDelegate {
     
-    var delegate:DailyViewController?
-    var dataSource:DailyViewController?
+    public var delegate:DailyViewController?
+    public var dataSource:DailyViewController?
     
-    //仮でこの配列を表示させる TODO
-    let texts = ["あ","い","う","え","お","か","き"]
+    //TODO ここはリストにして画面に複数表示できるようにすること
+    public var trainigData:TrainigData?
+    
     
     ///必要なTableViewのメソッド
     ///セルの行数追加
@@ -28,8 +29,10 @@ class TrainigInfoTableViewDataSource: NSObject,UITableViewDataSource,UITableView
         
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "Cell")
         
-        cell.textLabel?.text = texts[indexPath.row]
-        
+        if trainigData != nil {
+            cell.textLabel?.text = trainigData?.trainigMenu
+        }
+       
         ///セルを返す
         return cell
     }
@@ -37,7 +40,7 @@ class TrainigInfoTableViewDataSource: NSObject,UITableViewDataSource,UITableView
     ///セルをタップしたときのクリックイベント
     func tableView(_ tableView: UITableView, didSelectRowAtIndexPath IndexPath:NSIndexPath) {
         
-        ///コンソールにクリックしたテキストを印字する
-        print("ok")
+        //1行をタップしたときに画面にポップアップを表示させたい
+        
     }
 }

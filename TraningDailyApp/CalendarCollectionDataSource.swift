@@ -10,27 +10,47 @@ import UIKit
 
 class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
+    //datesource
     var delegate: DailyViewController?
     var dataSource: DailyViewController?
     
+    //Manager
     var dateManager = DateManager()
+    
+    //選択されたViewの位置を返す
+    private var date:String?
+
+    private var indexPath:IndexPath?
+    
+    private var trainigData:TrainigData?
         
     //クリックされたときのイベントメソッド
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let cell = collectionView.cellForItem(at: indexPath) as! CalendarCellViewController
         
-        //セルをクリックさせない
-        if indexPath.row < 7 && ((cell.dateNumLabel.text)?.characters.count)! >= 2{
-            return
-        }else if indexPath.row >= 30 && ((cell.dateNumLabel.text)?.characters.count)! <= 1{
-            return
+        if(self.indexPath != nil){
+            let beforeCell = collectionView.cellForItem(at: self.indexPath!) as! CalendarCellViewController
+            beforeCell.backgroundColor = UIColor.white
         }
         
-        let targetViewController = delegate?.storyboard!.instantiateViewController( withIdentifier:  "postViewController") as? PostViewController
-        targetViewController?.transitionDate = getDate(collectionView: collectionView, indexPath: indexPath)
+        cell.backgroundColor = UIColor.green
+        date = cell.dateNumLabel.text
         
-        delegate?.present( targetViewController!, animated: true, completion: nil)
+        self.indexPath = indexPath
+        
+        let dao = TraingDataDao()
+        for var row in dao.getTrainigData(){
+            
+            if row.date == getDate(indexPath: indexPath){
+                setTrainigData(trainigData: row)
+            }
+        }
+        
+        if trainigData != nil{
+            delegate?.relodTrainigMenu(trainigData: getTrainigData())
+        }
+
     }
     
     //Cellの合計数
@@ -54,7 +74,7 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
         let dao = TraingDataDao()
         for var row in dao.getTrainigData(){
             
-            if row.date == getDate(collectionView: collectionView, indexPath: indexPath){
+            if row.date == getDate(indexPath: indexPath){
                 cell.powereLabel.text = "💪"
             }
         }
@@ -75,7 +95,7 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
     }
 
     //セルの場所を渡すと日付を返す
-    private func getDate(collectionView: UICollectionView,indexPath:IndexPath) -> String{
+    public func getDate(indexPath:IndexPath) -> String{
         
         var cellText = dateManager.conversionDateFormat(index: indexPath.row)
         
@@ -100,5 +120,21 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
     //選択されている月を返す
     public func selectMonth(format:String) -> String{
         return dateManager.calendarHeader(format: format)
+    }
+    
+    //選択された日付を返す
+    public func selectedDate() -> String{
+        return date!
+    }
+    
+    //設定されたトレーニングデータを取得する
+    public func getTrainigData() -> TrainigData{
+
+        return trainigData!
+    }
+    
+    //トレーニングデータを設定する
+    public func setTrainigData(trainigData: TrainigData){
+        self.trainigData = trainigData
     }
 }

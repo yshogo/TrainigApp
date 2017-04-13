@@ -23,7 +23,6 @@ class ViewController: UIViewController , UITextFieldDelegate{
     }
 
     //指定されたIdentifyに画面遷移する
-    //(このメソッドは使用していないです。。。なぜなら画面間でデータを受け渡せないから、、、)
     public func next(indentify:String){
         let targetViewController = self.storyboard!.instantiateViewController( withIdentifier:  indentify)
         self.present( targetViewController, animated: true, completion: nil)

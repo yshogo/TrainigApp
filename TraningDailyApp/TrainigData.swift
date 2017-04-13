@@ -24,4 +24,5 @@ class TrainigData{
         self.num = num
     }
     
+    
 }

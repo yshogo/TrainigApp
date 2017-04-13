@@ -65,4 +65,24 @@ class DailyViewController:ViewController{
         callendarCollectionView.reloadData()
         calendaeHeader.text = calledarDataSource?.selectMonth(format: "YYYY/MM")
     }
+    
+    //画面遷移する前にデータ投稿画面に渡す
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        var date = calledarDataSource?.selectedDate()
+        if (date?.characters.count)! < 2 {
+            date = "0" + date!
+        }
+        let yearAndMonth = calledarDataSource!.selectMonth(format:"YYYY/MM")
+        
+        
+        let targetViewController = segue.destination as! PostViewController
+        targetViewController.transitionDate = yearAndMonth + "/" + date!
+    }
+    
+    //カレンダーからデータを取得する
+    public func relodTrainigMenu(trainigData: TrainigData){
+        tableViewDataSource?.trainigData = trainigData
+        trainingTableView?.reloadData()
+    }
 }

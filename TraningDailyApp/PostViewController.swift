@@ -63,6 +63,8 @@ class PostViewController:ViewController{
         
         datePickerField.inputView = datePicker
         
+        
+        
     }
     
     //DatePickerをスクロールしたときに呼ばれるクラス
@@ -127,5 +129,7 @@ class PostViewController:ViewController{
         
         let dao = TraingDataDao()
         dao.saveData(data: data)
+        
+        
     }
 }
