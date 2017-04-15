@@ -129,7 +129,5 @@ class PostViewController:ViewController{
         
         let dao = TraingDataDao()
         dao.saveData(data: data)
-        
-        
     }
 }
