@@ -29,10 +29,32 @@ class ViewController: UIViewController , UITextFieldDelegate{
     }
     
     //テキストビューでRetutnキーの入力後にキーボードを閉じる
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
 
+    
+    //画面にアラートを表示する
+    public func alert(title:String,messageText:String,okActition:UIAlertAction,noAction:UIAlertAction){
+        
+        let alert = UIAlertController(title: title, message: messageText, preferredStyle: .alert)
+        
+        alert.addAction(okActition)
+        alert.addAction(noAction)
+        
+        present(alert,animated: true, completion: nil)
+    }
+    
+    //画面にアラートを表示する
+    public func alert(title:String,messageText:String,okActition:UIAlertAction){
+        
+        let alert = UIAlertController(title: title, message: messageText, preferredStyle: .alert)
+        
+        alert.addAction(okActition)
+        
+        present(alert,animated: true, completion: nil)
+        
+    }
 }
 

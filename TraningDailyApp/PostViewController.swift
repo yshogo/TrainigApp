@@ -119,15 +119,40 @@ class PostViewController:ViewController{
     //投稿ボタンをクリックしたときのイベント
     @IBAction func postEvent(_ sender: Any) {
         
-        //データ取得する
-        let date = datePickerField.text
-        let trainingMenu = trainigMenuTableViewDelegate?.getSelectMenu()
-        let weight = weightTextField.text
-        let num = numTextField.text
         
-        let data = TrainigData(date: date!, trainigMenu: trainingMenu!, weight: weight!, num: num!)
+        let okAction: UIAlertAction = UIAlertAction(title: "ok", style: .default, handler: {
+            
+            (action:UIAlertAction!) -> Void in
+            
+            //データ取得する
+            let date = self.datePickerField.text
+            let trainingMenu = self.trainigMenuTableViewDelegate?.getSelectMenu()
+            let weight = self.weightTextField.text
+            let num = self.numTextField.text
+            
+            let data = TrainigData(date: date!, trainigMenu: trainingMenu!, weight: weight!, num: num!)
+            
+            let dao = TraingDataDao()
+            dao.saveData(data: data)
+            
+            let completeOk:UIAlertAction = UIAlertAction(title: "ok", style: .default, handler: {
+                (action:UIAlertAction!) -> Void in
+                
+                let viewController = self.storyboard?.instantiateViewController(withIdentifier: "dailyViewController")
+                
+                self.present(viewController!,animated: false, completion: nil)
+            })
+            
+            self.alert(title: "完了！", messageText: "保存が完了しました", okActition: completeOk)
+
+        })
         
-        let dao = TraingDataDao()
-        dao.saveData(data: data)
+        let notAction:UIAlertAction = UIAlertAction(title: "no", style: .default, handler: {
+            //何もしない
+            (action:UIAlertAction!) -> Void in
+        })
+        
+        alert(title: "確認", messageText: "保存してもよろしいですか", okActition: okAction, noAction: notAction)
     }
+    
 }
