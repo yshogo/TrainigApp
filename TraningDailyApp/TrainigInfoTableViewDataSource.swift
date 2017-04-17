@@ -37,13 +37,33 @@ class TrainigInfoTableViewDataSource: NSObject,UITableViewDataSource,UITableView
     }
     
     ///セルをタップしたときのクリックイベント
-    func tableView(_ tableView: UITableView, didSelectRowAtIndexPath IndexPath:NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt IndexPath:IndexPath) {
         
         //ここは標準のalertDialogを表示させることにする
-        let deleteAction = UIAlertAction(title: "編集する", style: .default, handler: {
+        let deleteAction = UIAlertAction(title: "削除", style: .default, handler: {
             (action:UIAlertAction!) -> Void in
-            
+            //データを削除します
+        })
+        
+        let editAction = UIAlertAction(title: "編集", style: .default, handler: {
+            (action:UIAlertAction!) -> Void in
+            //編集画面へ
+        })
+        
+        let okAction = UIAlertAction(title: "ok", style: .default, handler: {
+            (action:UIAlertAction) -> Void in
             
         })
+        
+        let mesageText = (trainigData?.date)! + "\n" + "種目:" + (trainigData?.trainigMenu)! + "\n" + "最大重量:" + (trainigData?.weight)! + "kg" + "\n" + "回数:" + (trainigData?.num)! + "回"
+        
+        let alert = UIAlertController(title: "登録データ", message: mesageText, preferredStyle: .alert)
+        
+        
+        alert.addAction(deleteAction)
+        alert.addAction(editAction)
+        alert.addAction(okAction)
+        
+        delegate?.present(alert,animated: true, completion: nil)
     }
 }
