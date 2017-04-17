@@ -16,7 +16,6 @@ class TrainigInfoTableViewDataSource: NSObject,UITableViewDataSource,UITableView
     //TODO ここはリストにして画面に複数表示できるようにすること
     public var trainigData:TrainigData?
     
-    
     ///必要なTableViewのメソッド
     ///セルの行数追加
     func tableView(_ tableView:UITableView,numberOfRowsInSection section: Int) -> Int {
@@ -40,7 +39,11 @@ class TrainigInfoTableViewDataSource: NSObject,UITableViewDataSource,UITableView
     ///セルをタップしたときのクリックイベント
     func tableView(_ tableView: UITableView, didSelectRowAtIndexPath IndexPath:NSIndexPath) {
         
-        //1行をタップしたときに画面にポップアップを表示させたい
-        
+        //ここは標準のalertDialogを表示させることにする
+        let deleteAction = UIAlertAction(title: "編集する", style: .default, handler: {
+            (action:UIAlertAction!) -> Void in
+            
+            
+        })
     }
 }

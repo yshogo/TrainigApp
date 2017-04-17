@@ -85,4 +85,10 @@ class DailyViewController:ViewController{
         tableViewDataSource?.trainigData = trainigData
         trainingTableView?.reloadData()
     }
+    
+    //データがない場合はTableViewをリセットする
+    public func relodTrainigMenu(){
+        tableViewDataSource?.trainigData = nil
+        trainingTableView?.reloadData()
+    }
 }

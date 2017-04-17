@@ -27,7 +27,6 @@ class PostViewController:ViewController{
                 
         initDataSource()
         
-        //DatePikerの初期設定(仮で今日の日づけを設定する)
         datePickerField.placeholder = transitionDate
         datePickerField.text = transitionDate
         self.view.addSubview(datePickerField)
@@ -53,7 +52,6 @@ class PostViewController:ViewController{
         numTextField.delegate = self
     }
     
-    
     //DatePickerを生成する
     private func createDatePicker(){
         
@@ -62,9 +60,6 @@ class PostViewController:ViewController{
         datePicker.datePickerMode = UIDatePickerMode.date
         
         datePickerField.inputView = datePicker
-        
-        
-        
     }
     
     //DatePickerをスクロールしたときに呼ばれるクラス

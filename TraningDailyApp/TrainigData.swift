@@ -9,7 +9,7 @@
 import Foundation
 
 
-class TrainigData{
+struct TrainigData{
     
     var date:String
     var trainigMenu:String
@@ -23,6 +23,6 @@ class TrainigData{
         self.weight = weight
         self.num = num
     }
-    
+ 
     
 }

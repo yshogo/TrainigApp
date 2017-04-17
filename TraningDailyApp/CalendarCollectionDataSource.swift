@@ -21,11 +21,11 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
     private var date:String?
 
     private var indexPath:IndexPath?
-    
     private var trainigData:TrainigData?
         
     //クリックされたときのイベントメソッド
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         
         let cell = collectionView.cellForItem(at: indexPath) as! CalendarCellViewController
         
@@ -40,17 +40,21 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
         self.indexPath = indexPath
         
         let dao = TraingDataDao()
+        
+        var count = 0
         for var row in dao.getTrainigData(){
             
             if row.date == getDate(indexPath: indexPath){
                 setTrainigData(trainigData: row)
+                count += 1
             }
         }
         
-        if trainigData != nil{
+        if trainigData != nil && count > 0{
             delegate?.relodTrainigMenu(trainigData: getTrainigData())
+        }else{
+            delegate?.relodTrainigMenu()
         }
-
     }
     
     //Cellの合計数
