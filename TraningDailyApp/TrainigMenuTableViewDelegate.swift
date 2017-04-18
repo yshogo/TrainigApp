@@ -10,8 +10,8 @@ import UIKit
 
 class TrainigMenuTableViewDelegate: NSObject,UITableViewDataSource,UITableViewDelegate{
     
-    var delegate:PostViewController!
-    var dataSource:PostViewController!
+    var delegate:TrainigPostViewController!
+    var dataSource:TrainigPostViewController!
     var trainingArray:[String]! = ["ベンチプレス","ダンベルプレス"]
     
     private var trainingMenu:String?

@@ -13,6 +13,8 @@ class DailyViewController:ViewController{
     var calledarDataSource:CalendarCollectionDataSource?
     var tableViewDataSource:TrainigInfoTableViewDataSource?
     
+    var trainigMenu:String?
+    
     @IBOutlet weak var callendarCollectionView: UICollectionView!
     @IBOutlet weak var trainingTableView: UITableView!
     @IBOutlet weak var calendaeHeader: UILabel!
@@ -22,6 +24,11 @@ class DailyViewController:ViewController{
         
         initCollectionDataSource()
         initTableViewDataSource()
+        
+        initData()
+        
+        let navigationButton = UIBarButtonItem(title: "カレンダー", style: .plain, target: self, action: nil)
+        self.navigationItem.backBarButtonItem = navigationButton
     }
 
     //CollectionViewの初期設定
@@ -48,6 +55,11 @@ class DailyViewController:ViewController{
         
         trainingTableView.delegate = tableViewDataSource
         trainingTableView.dataSource = tableViewDataSource
+        
+    }
+    
+    //テキストフィールドなどの初期設定
+    private func initData(){
         
     }
     

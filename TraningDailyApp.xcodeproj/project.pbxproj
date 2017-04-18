@@ -21,6 +21,7 @@
 		1958C47F1E7E584500306D1F /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1958C47E1E7E584500306D1F /* DailyViewController.swift */; };
 		1958C4811E7E5A2D00306D1F /* CalendarCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1958C4801E7E5A2D00306D1F /* CalendarCellViewController.swift */; };
 		1958C4831E7E5AF600306D1F /* CalendarCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1958C4821E7E5AF600306D1F /* CalendarCollectionDataSource.swift */; };
+		198BDF731EA5C15A003DEEC6 /* TrainigPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198BDF721EA5C15A003DEEC6 /* TrainigPostViewController.swift */; };
 		199C00621E7E8ADD0004727A /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C00611E7E8ADD0004727A /* DateManager.swift */; };
 		199C00641E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C00631E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift */; };
 		19A611FD1E822B190045B6B9 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A611FC1E822B190045B6B9 /* PostViewController.swift */; };
@@ -67,6 +68,7 @@
 		1958C47E1E7E584500306D1F /* DailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
 		1958C4801E7E5A2D00306D1F /* CalendarCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCellViewController.swift; sourceTree = "<group>"; };
 		1958C4821E7E5AF600306D1F /* CalendarCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionDataSource.swift; sourceTree = "<group>"; };
+		198BDF721EA5C15A003DEEC6 /* TrainigPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainigPostViewController.swift; sourceTree = "<group>"; };
 		199C00611E7E8ADD0004727A /* DateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		199C00631E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainigInfoTableViewDataSource.swift; sourceTree = "<group>"; };
 		19A611FC1E822B190045B6B9 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				1958C4481E7E552100306D1F /* ViewController.swift */,
 				1958C47E1E7E584500306D1F /* DailyViewController.swift */,
 				19A611FC1E822B190045B6B9 /* PostViewController.swift */,
+				198BDF721EA5C15A003DEEC6 /* TrainigPostViewController.swift */,
 			);
 			name = viewcontroller;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				1958C4831E7E5AF600306D1F /* CalendarCollectionDataSource.swift in Sources */,
 				1958C44F1E7E552100306D1F /* TraningDailyApp.xcdatamodeld in Sources */,
 				199C00641E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift in Sources */,
+				198BDF731EA5C15A003DEEC6 /* TrainigPostViewController.swift in Sources */,
 				19E74CBD1E867E6100B9AEB7 /* TrainigMenuTableViewDelegate.swift in Sources */,
 				19A612011E82B8140045B6B9 /* DateToStringUtil.swift in Sources */,
 			);

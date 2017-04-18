@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController , UITextFieldDelegate{
     
     var textFieldDelegate:UIViewController?
+    var textField:UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,6 @@ class ViewController: UIViewController , UITextFieldDelegate{
         return true
     }
 
-    
     //画面にアラートを表示する
     public func alert(title:String,messageText:String,okActition:UIAlertAction,noAction:UIAlertAction){
         
@@ -54,6 +54,19 @@ class ViewController: UIViewController , UITextFieldDelegate{
         alert.addAction(okActition)
                 
         present(alert,animated: true, completion: nil)
+    }
+    
+    //他のところをタップするとキーボードを出させない
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //非表示にする。
+        if(textField != nil && (textField?.isFirstResponder)!){
+            textField?.resignFirstResponder()
+        }
+    }
+    
+    //テキストフィールドをセットする
+    public func setTextField(textField:UITextField){
+        self.textField = textField
     }
 }
 

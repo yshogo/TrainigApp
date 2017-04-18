@@ -1,0 +1,60 @@
+//
+//  TrainigPostViewController.swift
+//  TraningDailyApp
+//
+//  Created by ShogoYamada on 2017/04/18.
+//  Copyright © 2017年 山田尚吾. All rights reserved.
+//
+
+import UIKit
+
+class TrainigPostViewController: ViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    var trainigMenuTableViewDelegate:TrainigMenuTableViewDelegate?
+
+  
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        initDataSource()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    private func initDataSource(){
+        //筋トレ種目のTableView
+        trainigMenuTableViewDelegate = TrainigMenuTableViewDelegate()
+        trainigMenuTableViewDelegate?.delegate = self
+        trainigMenuTableViewDelegate?.dataSource = self
+        
+        tableView.dataSource = trainigMenuTableViewDelegate
+        tableView.delegate = trainigMenuTableViewDelegate
+    }
+    
+    
+    @IBAction func musclePartAction(_ sender: Any) {
+        
+        switch (sender as AnyObject).selectedSegmentIndex {
+        case 0:
+            trainigMenuTableViewDelegate?.trainingArray = ["ベンチプレス","ダンベルプレス"]
+            refreshTableView()
+        case 1:
+            trainigMenuTableViewDelegate?.trainingArray = ["スクワット","レッグプレス"]
+            refreshTableView()
+        default:
+            trainigMenuTableViewDelegate?.trainingArray = ["デットリフト","ラットプルダウン"]
+            refreshTableView()
+        }
+    }
+    
+    //TableViewをリフレッシュする
+    private func refreshTableView(){
+        tableView.reloadData()
+    }
+    
+}

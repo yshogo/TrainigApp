@@ -50,6 +50,7 @@ class TrainigInfoTableViewDataSource: NSObject,UITableViewDataSource,UITableView
             //編集画面へ
         })
         
+        //okボタンのクリックイベント
         let okAction = UIAlertAction(title: "ok", style: .default, handler: {
             (action:UIAlertAction) -> Void in
             
