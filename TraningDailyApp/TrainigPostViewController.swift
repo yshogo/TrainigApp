@@ -11,6 +11,7 @@ import UIKit
 class TrainigPostViewController: ViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
     var trainigMenuTableViewDelegate:TrainigMenuTableViewDelegate?
   
     override func viewDidLoad() {

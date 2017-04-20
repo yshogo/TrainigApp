@@ -30,6 +30,8 @@
 		19EBDCCA1EA838CF003C4D91 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBDCC91EA838CF003C4D91 /* KeyboardViewController.swift */; };
 		19EBDCCE1EA838CF003C4D91 /* TrainigTenkey.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 19EBDCC71EA838CF003C4D91 /* TrainigTenkey.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		19EBDCD41EA8629E003C4D91 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19EBDCD31EA8629E003C4D91 /* View.xib */; };
+		19EBDCD61EA90216003C4D91 /* NumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBDCD51EA90216003C4D91 /* NumViewController.swift */; };
+		19EBDCD81EA9034B003C4D91 /* NumPickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBDCD71EA9034B003C4D91 /* NumPickerDataSource.swift */; };
 		19FCF2C31E908BCD000C1ECE /* TrainigData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FCF2C21E908BCD000C1ECE /* TrainigData.swift */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +104,8 @@
 		19EBDCC91EA838CF003C4D91 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		19EBDCCB1EA838CF003C4D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19EBDCD31EA8629E003C4D91 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		19EBDCD51EA90216003C4D91 /* NumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumViewController.swift; sourceTree = "<group>"; };
+		19EBDCD71EA9034B003C4D91 /* NumPickerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumPickerDataSource.swift; sourceTree = "<group>"; };
 		19FCF2C21E908BCD000C1ECE /* TrainigData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainigData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +161,7 @@
 		1910DE331E868DAC00884352 /* pickerView */ = {
 			isa = PBXGroup;
 			children = (
+				19EBDCD71EA9034B003C4D91 /* NumPickerDataSource.swift */,
 			);
 			name = pickerView;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 				1958C47E1E7E584500306D1F /* DailyViewController.swift */,
 				19A611FC1E822B190045B6B9 /* PostViewController.swift */,
 				198BDF721EA5C15A003DEEC6 /* TrainigPostViewController.swift */,
+				19EBDCD51EA90216003C4D91 /* NumViewController.swift */,
 			);
 			name = viewcontroller;
 			sourceTree = "<group>";
@@ -502,8 +508,10 @@
 				1958C44F1E7E552100306D1F /* TraningDailyApp.xcdatamodeld in Sources */,
 				199C00641E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift in Sources */,
 				198BDF731EA5C15A003DEEC6 /* TrainigPostViewController.swift in Sources */,
+				19EBDCD61EA90216003C4D91 /* NumViewController.swift in Sources */,
 				19E74CBD1E867E6100B9AEB7 /* TrainigMenuTableViewDelegate.swift in Sources */,
 				19A612011E82B8140045B6B9 /* DateToStringUtil.swift in Sources */,
+				19EBDCD81EA9034B003C4D91 /* NumPickerDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
