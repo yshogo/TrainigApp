@@ -16,7 +16,6 @@ class TrainigMenuTableViewDelegate: NSObject,UITableViewDataSource,UITableViewDe
     
     private var trainingMenu:String?
     
-    
     ///必要なTableViewのメソッド
     ///セルの行数追加
     func tableView(_ tableView:UITableView,numberOfRowsInSection section: Int) -> Int {
@@ -42,6 +41,10 @@ class TrainigMenuTableViewDelegate: NSObject,UITableViewDataSource,UITableViewDe
     
     //選択されたデータを返す
     public func getSelectMenu() -> String{
+        
+        if self.trainingMenu == nil {
+            return "1"
+        }
         return self.trainingMenu!
     }
 

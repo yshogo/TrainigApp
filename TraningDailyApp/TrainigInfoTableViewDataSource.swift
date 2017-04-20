@@ -13,13 +13,15 @@ class TrainigInfoTableViewDataSource: NSObject,UITableViewDataSource,UITableView
     public var delegate:DailyViewController?
     public var dataSource:DailyViewController?
     
-    //TODO ここはリストにして画面に複数表示できるようにすること
-    public var trainigData:TrainigData?
+    public var trainigDataList:Array<TrainigData> = Array<TrainigData>()
     
     ///必要なTableViewのメソッド
     ///セルの行数追加
     func tableView(_ tableView:UITableView,numberOfRowsInSection section: Int) -> Int {
-        return 1
+        
+        if trainigDataList == nil {return 0}
+        
+        return trainigDataList.count
     }
     
     ///必要なTableViewメソッド
@@ -28,8 +30,8 @@ class TrainigInfoTableViewDataSource: NSObject,UITableViewDataSource,UITableView
         
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "Cell")
         
-        if trainigData != nil {
-            cell.textLabel?.text = trainigData?.trainigMenu
+        if trainigDataList != nil {
+            cell.textLabel?.text = trainigDataList[indexPath.row].trainigMenu
         }
        
         ///セルを返す
@@ -56,7 +58,9 @@ class TrainigInfoTableViewDataSource: NSObject,UITableViewDataSource,UITableView
             
         })
         
-        let mesageText = (trainigData?.date)! + "\n" + "種目:" + (trainigData?.trainigMenu)! + "\n" + "最大重量:" + (trainigData?.weight)! + "kg" + "\n" + "回数:" + (trainigData?.num)! + "回"
+        let trainigData = trainigDataList[IndexPath.row]
+        
+        let mesageText = (trainigData.date) + "\n" + "種目:" + (trainigData.trainigMenu) + "\n" + "最大重量:" + (trainigData.weight) + "kg" + "\n" + "回数:" + (trainigData.num) + "回"
         
         let alert = UIAlertController(title: "登録データ", message: mesageText, preferredStyle: .alert)
         

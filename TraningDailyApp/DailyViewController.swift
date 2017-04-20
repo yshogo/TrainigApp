@@ -12,9 +12,7 @@ class DailyViewController:ViewController{
     
     var calledarDataSource:CalendarCollectionDataSource?
     var tableViewDataSource:TrainigInfoTableViewDataSource?
-    
-    var trainigMenu:String?
-    
+        
     @IBOutlet weak var callendarCollectionView: UICollectionView!
     @IBOutlet weak var trainingTableView: UITableView!
     @IBOutlet weak var calendaeHeader: UILabel!
@@ -93,14 +91,14 @@ class DailyViewController:ViewController{
     }
     
     //カレンダーからデータを取得する
-    public func relodTrainigMenu(trainigData: TrainigData){
-        tableViewDataSource?.trainigData = trainigData
+    public func relodTrainigMenu(trainigDataList: Array<TrainigData>){
+        tableViewDataSource?.trainigDataList = trainigDataList
         trainingTableView?.reloadData()
     }
     
     //データがない場合はTableViewをリセットする
     public func relodTrainigMenu(){
-        tableViewDataSource?.trainigData = nil
+        tableViewDataSource?.trainigDataList = Array<TrainigData>()
         trainingTableView?.reloadData()
     }
 }

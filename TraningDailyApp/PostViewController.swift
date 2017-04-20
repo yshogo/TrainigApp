@@ -12,13 +12,12 @@ import UIKit
 class PostViewController:ViewController{
     
     var datePicker:UIDatePicker!
+    var trainigMenu:String?
         
     @IBOutlet weak var datePickerField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var numTextField: UITextField!
     @IBOutlet weak var trainigMenuTextField: UITextField!
-    
-    
     
     //カレンダー画面からデータを取得したときにセットされる日付
     var transitionDate:String!
@@ -27,10 +26,7 @@ class PostViewController:ViewController{
         super.viewDidLoad()
                 
         initDataSource()
-        
-        datePickerField.placeholder = transitionDate
-        datePickerField.text = transitionDate
-        self.view.addSubview(datePickerField)
+        initData()
         
         //DatePickerを生成する
         createDatePicker()
@@ -77,6 +73,19 @@ class PostViewController:ViewController{
         toolBar.items = [compToolBarBtn]
         
         datePickerField.inputAccessoryView = toolBar
+    }
+    
+    //テキストフィールドの初期設定
+    private func initData(){
+        
+        //日付の設定
+        datePickerField.placeholder = transitionDate
+        datePickerField.text = transitionDate
+        self.view.addSubview(datePickerField)
+        
+        //トレーニングメニューの設定
+        trainigMenuTextField.text = trainigMenu
+        
     }
     
     //完了を押したら閉じる

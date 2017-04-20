@@ -21,11 +21,12 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
     private var date:String?
 
     private var indexPath:IndexPath?
-    private var trainigData:TrainigData?
+    private var trainigDataList:Array<TrainigData> = Array<TrainigData>()
         
     //クリックされたときのイベントメソッド
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        trainigDataList = Array<TrainigData>()
         
         let cell = collectionView.cellForItem(at: indexPath) as! CalendarCellViewController
         
@@ -50,8 +51,8 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
             }
         }
         
-        if trainigData != nil && count > 0{
-            delegate?.relodTrainigMenu(trainigData: getTrainigData())
+        if trainigDataList != nil && count > 0{
+            delegate?.relodTrainigMenu(trainigDataList: getTrainigData())
         }else{
             delegate?.relodTrainigMenu()
         }
@@ -132,13 +133,13 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
     }
     
     //設定されたトレーニングデータを取得する
-    public func getTrainigData() -> TrainigData{
+    public func getTrainigData() -> Array<TrainigData>{
 
-        return trainigData!
+        return trainigDataList
     }
     
     //トレーニングデータを設定する
     public func setTrainigData(trainigData: TrainigData){
-        self.trainigData = trainigData
+        self.trainigDataList.append(trainigData)
     }
 }

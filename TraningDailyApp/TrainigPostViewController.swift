@@ -12,7 +12,6 @@ class TrainigPostViewController: ViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var trainigMenuTableViewDelegate:TrainigMenuTableViewDelegate?
-
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,5 +55,30 @@ class TrainigPostViewController: ViewController {
     private func refreshTableView(){
         tableView.reloadData()
     }
+    
+    //決定ボタンのクリックイベント
+    @IBAction func onEnter(_ sender: Any) {
+        
+        let navigationViewController = self.navigationController!
+        //呼び出し元にパラメータを渡す
+        let infoViewController = navigationViewController.viewControllers[navigationViewController.viewControllers.count-2] as! PostViewController
+        
+        let selectMenu = trainigMenuTableViewDelegate?.getSelectMenu()
+        
+        if selectMenu == "1" {
+            let okAction = UIAlertAction(title: "ok", style: .default, handler: {
+                (action:UIAlertAction!) -> Void in
+                
+            })
+            alert(title: "エラー", messageText: "筋トレ種目を\n選択してください", okActition: okAction)
+            
+            return
+        }
+        
+        infoViewController.trainigMenuTextField.text = selectMenu
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
 }

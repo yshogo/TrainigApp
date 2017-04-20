@@ -27,6 +27,9 @@
 		19A611FD1E822B190045B6B9 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A611FC1E822B190045B6B9 /* PostViewController.swift */; };
 		19A612011E82B8140045B6B9 /* DateToStringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A612001E82B8140045B6B9 /* DateToStringUtil.swift */; };
 		19E74CBD1E867E6100B9AEB7 /* TrainigMenuTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E74CBC1E867E6100B9AEB7 /* TrainigMenuTableViewDelegate.swift */; };
+		19EBDCCA1EA838CF003C4D91 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBDCC91EA838CF003C4D91 /* KeyboardViewController.swift */; };
+		19EBDCCE1EA838CF003C4D91 /* TrainigTenkey.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 19EBDCC71EA838CF003C4D91 /* TrainigTenkey.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		19EBDCD41EA8629E003C4D91 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19EBDCD31EA8629E003C4D91 /* View.xib */; };
 		19FCF2C31E908BCD000C1ECE /* TrainigData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FCF2C21E908BCD000C1ECE /* TrainigData.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +48,28 @@
 			remoteGlobalIDString = 1958C4421E7E552100306D1F;
 			remoteInfo = TraningDailyApp;
 		};
+		19EBDCCC1EA838CF003C4D91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1958C43B1E7E552100306D1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19EBDCC61EA838CF003C4D91;
+			remoteInfo = TrainigTenkey;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		19EBDCD21EA838CF003C4D91 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				19EBDCCE1EA838CF003C4D91 /* TrainigTenkey.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1945A7991E8F560D00818B6F /* TraingDataDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraingDataDao.swift; sourceTree = "<group>"; };
@@ -74,6 +98,10 @@
 		19A611FC1E822B190045B6B9 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		19A612001E82B8140045B6B9 /* DateToStringUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateToStringUtil.swift; sourceTree = "<group>"; };
 		19E74CBC1E867E6100B9AEB7 /* TrainigMenuTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainigMenuTableViewDelegate.swift; sourceTree = "<group>"; };
+		19EBDCC71EA838CF003C4D91 /* TrainigTenkey.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TrainigTenkey.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		19EBDCC91EA838CF003C4D91 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		19EBDCCB1EA838CF003C4D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19EBDCD31EA8629E003C4D91 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		19FCF2C21E908BCD000C1ECE /* TrainigData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainigData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +121,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1958C4621E7E552200306D1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19EBDCC41EA838CF003C4D91 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -140,6 +175,7 @@
 				1958C4451E7E552100306D1F /* TraningDailyApp */,
 				1958C45D1E7E552200306D1F /* TraningDailyAppTests */,
 				1958C4681E7E552200306D1F /* TraningDailyAppUITests */,
+				19EBDCC81EA838CF003C4D91 /* TrainigTenkey */,
 				1958C4441E7E552100306D1F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -150,6 +186,7 @@
 				1958C4431E7E552100306D1F /* TraningDailyApp.app */,
 				1958C45A1E7E552100306D1F /* TraningDailyAppTests.xctest */,
 				1958C4651E7E552200306D1F /* TraningDailyAppUITests.xctest */,
+				19EBDCC71EA838CF003C4D91 /* TrainigTenkey.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -263,6 +300,16 @@
 			name = cells;
 			sourceTree = "<group>";
 		};
+		19EBDCC81EA838CF003C4D91 /* TrainigTenkey */ = {
+			isa = PBXGroup;
+			children = (
+				19EBDCC91EA838CF003C4D91 /* KeyboardViewController.swift */,
+				19EBDCD31EA8629E003C4D91 /* View.xib */,
+				19EBDCCB1EA838CF003C4D91 /* Info.plist */,
+			);
+			path = TrainigTenkey;
+			sourceTree = "<group>";
+		};
 		19FCF2C11E908BA2000C1ECE /* propertys */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,10 +328,12 @@
 				1958C43F1E7E552100306D1F /* Sources */,
 				1958C4401E7E552100306D1F /* Frameworks */,
 				1958C4411E7E552100306D1F /* Resources */,
+				19EBDCD21EA838CF003C4D91 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				19EBDCCD1EA838CF003C4D91 /* PBXTargetDependency */,
 			);
 			name = TraningDailyApp;
 			productName = TraningDailyApp;
@@ -327,6 +376,23 @@
 			productReference = 1958C4651E7E552200306D1F /* TraningDailyAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		19EBDCC61EA838CF003C4D91 /* TrainigTenkey */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19EBDCD11EA838CF003C4D91 /* Build configuration list for PBXNativeTarget "TrainigTenkey" */;
+			buildPhases = (
+				19EBDCC31EA838CF003C4D91 /* Sources */,
+				19EBDCC41EA838CF003C4D91 /* Frameworks */,
+				19EBDCC51EA838CF003C4D91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrainigTenkey;
+			productName = TrainigTenkey;
+			productReference = 19EBDCC71EA838CF003C4D91 /* TrainigTenkey.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -354,6 +420,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 1958C4421E7E552100306D1F;
 					};
+					19EBDCC61EA838CF003C4D91 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 77MXZW87XD;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 1958C43E1E7E552100306D1F /* Build configuration list for PBXProject "TraningDailyApp" */;
@@ -372,6 +443,7 @@
 				1958C4421E7E552100306D1F /* TraningDailyApp */,
 				1958C4591E7E552100306D1F /* TraningDailyAppTests */,
 				1958C4641E7E552200306D1F /* TraningDailyAppUITests */,
+				19EBDCC61EA838CF003C4D91 /* TrainigTenkey */,
 			);
 		};
 /* End PBXProject section */
@@ -398,6 +470,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19EBDCC51EA838CF003C4D91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19EBDCD41EA8629E003C4D91 /* View.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +523,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		19EBDCC31EA838CF003C4D91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19EBDCCA1EA838CF003C4D91 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -455,6 +543,11 @@
 			isa = PBXTargetDependency;
 			target = 1958C4421E7E552100306D1F /* TraningDailyApp */;
 			targetProxy = 1958C4661E7E552200306D1F /* PBXContainerItemProxy */;
+		};
+		19EBDCCD1EA838CF003C4D91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19EBDCC61EA838CF003C4D91 /* TrainigTenkey */;
+			targetProxy = 19EBDCCC1EA838CF003C4D91 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -572,6 +665,7 @@
 		1958C46F1E7E552200306D1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 77MXZW87XD;
 				INFOPLIST_FILE = TraningDailyApp/Info.plist;
@@ -585,6 +679,7 @@
 		1958C4701E7E552200306D1F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 77MXZW87XD;
 				INFOPLIST_FILE = TraningDailyApp/Info.plist;
@@ -653,6 +748,32 @@
 			};
 			name = Release;
 		};
+		19EBDCCF1EA838CF003C4D91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 77MXZW87XD;
+				INFOPLIST_FILE = TrainigTenkey/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.shogo.TraningDailyApp.TrainigTenkey;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		19EBDCD01EA838CF003C4D91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 77MXZW87XD;
+				INFOPLIST_FILE = TrainigTenkey/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.shogo.TraningDailyApp.TrainigTenkey;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -691,6 +812,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		19EBDCD11EA838CF003C4D91 /* Build configuration list for PBXNativeTarget "TrainigTenkey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19EBDCCF1EA838CF003C4D91 /* Debug */,
+				19EBDCD01EA838CF003C4D91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
