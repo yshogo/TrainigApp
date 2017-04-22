@@ -13,7 +13,7 @@ class PostViewController:ViewController{
     
     var datePicker:UIDatePicker!
     var trainigMenu:String?
-        
+    
     @IBOutlet weak var datePickerField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var numTextField: UITextField!

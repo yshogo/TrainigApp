@@ -375,6 +375,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="onEnter:" destination="WVj-nm-mYP" eventType="touchUpInside" id="OFV-Cs-rbM"/>
                                     <action selector="postEvent:" destination="EH3-zz-oWA" eventType="touchUpInside" id="doa-Xf-3sl"/>
                                 </connections>
                             </button>
@@ -395,10 +396,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="numTextField" destination="hxx-fq-hCu" id="8UZ-fC-ZYD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GxK-Fz-25x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3227.536231884058" y="-576.35869565217399"/>
+            <point key="canvasLocation" x="3597" y="-615"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Iqf-TI-bk7">
