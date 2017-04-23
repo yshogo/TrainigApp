@@ -3,16 +3,18 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "CalendarCollectionDataSource.collectionView(UICollectionView, cellForItemAt : IndexPath) -&gt; UICollectionViewCell:CalendarCollectionDataSource.swift">
+         contextName = "WeightViewController.backAction(Any) -&gt; ():WeightViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "getDate(collectionView: collectionView, indexPath: indexPath)">
+               value = "String(text[text.index(text.endIndex, offsetBy: -1)])&#10;">
             </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PostViewController.viewDidLoad() -&gt; ():PostViewController.swift">
+         <PersistentStrings>
             <PersistentString
-               value = "cell">
-            </PersistentString>
-            <PersistentString
-               value = "row.date">
+               value = "transitionDate">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -25,10 +27,16 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "PostViewController.viewDidLoad() -&gt; ():PostViewController.swift">
+         contextName = "CalendarCollectionDataSource.collectionView(UICollectionView, cellForItemAt : IndexPath) -&gt; UICollectionViewCell:CalendarCollectionDataSource.swift">
          <PersistentStrings>
             <PersistentString
-               value = "transitionDate">
+               value = "getDate(collectionView: collectionView, indexPath: indexPath)">
+            </PersistentString>
+            <PersistentString
+               value = "cell">
+            </PersistentString>
+            <PersistentString
+               value = "row.date">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

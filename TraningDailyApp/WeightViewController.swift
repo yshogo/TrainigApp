@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class WeightViewController: ViewController {
 
@@ -73,6 +74,20 @@ class WeightViewController: ViewController {
         weightTextField.text = ""
     }
     
+    @IBAction func backAction(_ sender: Any) {
+        
+        if weightTextField.text == "" {return}
+        
+        if weightTextField.text == "自重" {
+            weightTextField.text = ""
+            return
+        }
+        
+        let text:String = weightTextField.text!
+        let endPoint:Int = text.characters.count - 1
+        
+        weightTextField.text = (text as NSString).substring(to: endPoint)
+    }
     
     //テキストを変更する
     private func writeTexiField(number:String){

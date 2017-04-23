@@ -526,6 +526,9 @@
                                         <state key="normal" title="←">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="backAction:" destination="QiO-O6-Ovx" eventType="touchUpInside" id="1hF-1C-TBg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nmu-EU-CzE">
                                         <rect key="frame" x="302" y="143" width="112" height="62"/>
