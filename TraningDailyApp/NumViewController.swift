@@ -33,8 +33,9 @@ class NumViewController: ViewController {
         numberPicker.dataSource = piclerDataSource
         piclerDataSource?.textField = numTextField
         
-        numberPicker.frame = CGRect(x:0,y: 0,width:self.view.bounds.width,height:250.0)
+        numberPicker.frame = CGRect(x:0,y: 0,width:self.view.bounds.width,height:100.0)
         numTextField.inputView = numberPicker
+        
     }
     
     /// 最大重量のTollbarを生成する

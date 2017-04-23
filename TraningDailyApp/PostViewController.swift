@@ -140,6 +140,4 @@ class PostViewController:ViewController{
         numTextField.resignFirstResponder()
         weightTextField.resignFirstResponder()
     }
-
-    
 }

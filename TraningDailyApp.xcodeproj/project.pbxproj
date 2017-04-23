@@ -26,6 +26,7 @@
 		199C00641E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C00631E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift */; };
 		19A611FD1E822B190045B6B9 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A611FC1E822B190045B6B9 /* PostViewController.swift */; };
 		19A612011E82B8140045B6B9 /* DateToStringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A612001E82B8140045B6B9 /* DateToStringUtil.swift */; };
+		19B0A3E91EAC356900817242 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0A3E81EAC356900817242 /* WeightViewController.swift */; };
 		19E74CBD1E867E6100B9AEB7 /* TrainigMenuTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E74CBC1E867E6100B9AEB7 /* TrainigMenuTableViewDelegate.swift */; };
 		19EBDCCA1EA838CF003C4D91 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBDCC91EA838CF003C4D91 /* KeyboardViewController.swift */; };
 		19EBDCCE1EA838CF003C4D91 /* TrainigTenkey.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 19EBDCC71EA838CF003C4D91 /* TrainigTenkey.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -99,6 +100,7 @@
 		199C00631E7EB1E50004727A /* TrainigInfoTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainigInfoTableViewDataSource.swift; sourceTree = "<group>"; };
 		19A611FC1E822B190045B6B9 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		19A612001E82B8140045B6B9 /* DateToStringUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateToStringUtil.swift; sourceTree = "<group>"; };
+		19B0A3E81EAC356900817242 /* WeightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		19E74CBC1E867E6100B9AEB7 /* TrainigMenuTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainigMenuTableViewDelegate.swift; sourceTree = "<group>"; };
 		19EBDCC71EA838CF003C4D91 /* TrainigTenkey.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TrainigTenkey.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		19EBDCC91EA838CF003C4D91 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				19A611FC1E822B190045B6B9 /* PostViewController.swift */,
 				198BDF721EA5C15A003DEEC6 /* TrainigPostViewController.swift */,
 				19EBDCD51EA90216003C4D91 /* NumViewController.swift */,
+				19B0A3E81EAC356900817242 /* WeightViewController.swift */,
 			);
 			name = viewcontroller;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B0A3E91EAC356900817242 /* WeightViewController.swift in Sources */,
 				19A611FD1E822B190045B6B9 /* PostViewController.swift in Sources */,
 				1945A79A1E8F560D00818B6F /* TraingDataDao.swift in Sources */,
 				1945A79E1E8F57BA00818B6F /* TrainigMenuEntity+CoreDataProperties.swift in Sources */,
@@ -828,6 +832,7 @@
 				19EBDCD01EA838CF003C4D91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
