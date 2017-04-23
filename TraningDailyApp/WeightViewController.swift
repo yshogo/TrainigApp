@@ -125,7 +125,30 @@ class WeightViewController: ViewController {
         
         let infoVIewController = navigationController.viewControllers[navigationController.viewControllers.count - 2] as! PostViewController
         
-        infoVIewController.weightTextField.text = weightTextField.text
+        let wightSize:String = self.weightTextField.text!
+        
+        if wightSize == "" {
+            let okAction = UIAlertAction(title: "ok", style: .default, handler: {
+                (action:UIAlertAction!) -> Void in
+            })
+            
+            alert(title: "エラー", messageText: "重量を入力してください", okActition: okAction)
+            
+            return
+        }
+        
+        if Int(wightSize)! > 900 {
+            let okAction = UIAlertAction(title: "ok", style: .default, handler: {
+                (action:UIAlertAction!) -> Void in
+            })
+            
+            alert(title: "エラー", messageText: "数が大きすぎいませんか？？", okActition: okAction)
+            
+            return
+
+        }
+        
+        infoVIewController.weightTextField.text = wightSize
         
         self.navigationController?.popViewController(animated: true)
         
