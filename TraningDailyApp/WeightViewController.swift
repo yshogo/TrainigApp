@@ -117,5 +117,19 @@ class WeightViewController: ViewController {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         weightTextField.resignFirstResponder()
     }
+    
+    //決定ボタンのクリックイベント
+    @IBAction func onEnter(_ sender: Any) {
+        
+        let navigationController = self.navigationController!
+        
+        let infoVIewController = navigationController.viewControllers[navigationController.viewControllers.count - 2] as! PostViewController
+        
+        infoVIewController.weightTextField.text = weightTextField.text
+        
+        self.navigationController?.popViewController(animated: true)
+        
+    }
+    
 
 }
