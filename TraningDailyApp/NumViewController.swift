@@ -67,7 +67,7 @@ class NumViewController: ViewController {
         let infoViewController = navigationController.viewControllers[navigationController.viewControllers.count - 2] as! PostViewController
         
         if self.numTextField.text == "" {
-            let okAction = UIAlertAction(title: "ok", style: .default, handler: {
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: {
                 (action:UIAlertAction!) -> Void in
             })
             

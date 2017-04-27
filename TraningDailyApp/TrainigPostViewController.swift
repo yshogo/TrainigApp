@@ -67,7 +67,7 @@ class TrainigPostViewController: ViewController {
         let selectMenu = trainigMenuTableViewDelegate?.getSelectMenu()
         
         if selectMenu == "1" {
-            let okAction = UIAlertAction(title: "ok", style: .default, handler: {
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: {
                 (action:UIAlertAction!) -> Void in
                 
             })

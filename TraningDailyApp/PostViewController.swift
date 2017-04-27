@@ -112,7 +112,7 @@ class PostViewController:ViewController{
             let dao = TraingDataDao()
             dao.saveData(data: data)
             
-            let completeOk:UIAlertAction = UIAlertAction(title: "ok", style: .default, handler: {
+            let completeOk:UIAlertAction = UIAlertAction(title: "YES", style: .default, handler: {
                 (action:UIAlertAction!) -> Void in
                 
                 let viewController = self.storyboard?.instantiateViewController(withIdentifier: "dailyViewController")
@@ -124,7 +124,7 @@ class PostViewController:ViewController{
 
         })
         
-        let notAction:UIAlertAction = UIAlertAction(title: "no", style: .default, handler: {
+        let notAction:UIAlertAction = UIAlertAction(title: "NO", style: .default, handler: {
             //何もしない
             (action:UIAlertAction!) -> Void in
         })

@@ -128,7 +128,7 @@ class WeightViewController: ViewController {
         let wightSize:String = self.weightTextField.text!
         
         if wightSize == "" {
-            let okAction = UIAlertAction(title: "ok", style: .default, handler: {
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: {
                 (action:UIAlertAction!) -> Void in
             })
             
@@ -137,7 +137,7 @@ class WeightViewController: ViewController {
             return
         }
         
-        if Int(wightSize)! > 900 {
+        if wightSize != "自重" && Int(wightSize)! > 900 {
             let okAction = UIAlertAction(title: "ok", style: .default, handler: {
                 (action:UIAlertAction!) -> Void in
             })

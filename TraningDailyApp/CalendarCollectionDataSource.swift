@@ -22,7 +22,7 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
 
     private var indexPath:IndexPath?
     private var trainigDataList:Array<TrainigData> = Array<TrainigData>()
-        
+    
     //クリックされたときのイベントメソッド
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
@@ -76,6 +76,17 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
             cell.powereLabel.text = ""
         }
         
+        var ddDate = cell.dateNumLabel.text!
+        if ddDate.characters.count == 1{
+            ddDate = "0" + ddDate
+        }
+        
+        if dateManager.calendarHeader(format: "yyyy/MM/dd") == dateManager.calendarHeader(format: "yyyy/MM") + "/" + ddDate{
+            
+            cell.backgroundColor = UIColor.green
+        }
+        
+        
         let dao = TraingDataDao()
         for var row in dao.getTrainigData(){
             
@@ -86,17 +97,20 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
         
         //別の月が同じ月だと判定されてしまう不具合修正
         if indexPath.row < 7 && ((cell.dateNumLabel.text)?.characters.count)! >= 2{
-            cell.powereLabel.text = ""
-            cell.dateNumLabel.text = ""
-            cell.isUserInteractionEnabled = false
+            notCell(cell: cell)
         }else if indexPath.row >= 30 && ((cell.dateNumLabel.text)?.characters.count)! <= 1{
-            
-            cell.powereLabel.text = ""
-            cell.dateNumLabel.text = ""
-            cell.isUserInteractionEnabled = false
+            notCell(cell:cell)
         }
         
         return cell
+    }
+    
+    //なにも表示しないセルを初期化させる
+    private func notCell(cell:CalendarCellViewController){
+        cell.powereLabel.text = ""
+        cell.dateNumLabel.text = ""
+        cell.isUserInteractionEnabled = false
+        cell.backgroundColor = UIColor.white
     }
 
     //セルの場所を渡すと日付を返す

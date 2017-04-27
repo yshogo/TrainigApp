@@ -40,8 +40,8 @@ class ViewController: UIViewController , UITextFieldDelegate{
         
         let alert = UIAlertController(title: title, message: messageText, preferredStyle: .alert)
         
-        alert.addAction(okActition)
         alert.addAction(noAction)
+        alert.addAction(okActition)
         
         present(alert,animated: true, completion: nil)
     }
