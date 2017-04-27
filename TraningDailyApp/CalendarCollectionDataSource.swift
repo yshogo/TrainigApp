@@ -25,10 +25,31 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
     
     //クリックされたときのイベントメソッド
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        let cell = collectionView.cellForItem(at: indexPath) as! CalendarCellViewController
+
+        date = cell.dateNumLabel.text
+        
+        let formatter: DateFormatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        let selectedDate = formatter.date(from: getDate(indexPath: indexPath))
+        
+        let now = NSDate()
+        let calendar = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!
+        
+        if case calendar.compare(selectedDate!, to: now as Date, toUnitGranularity: .day) = ComparisonResult.orderedDescending{
+            
+            let okAction:UIAlertAction = UIAlertAction(title: "OK", style: .default, handler: {
+                (action:UIAlertAction) -> Void in
+                
+            })
+            
+            delegate?.alert(title: "エラー", messageText: "未来は選択できません", okActition: okAction)
+            return
+        }
         
         trainigDataList = Array<TrainigData>()
         
-        let cell = collectionView.cellForItem(at: indexPath) as! CalendarCellViewController
         
         if(self.indexPath != nil){
             let beforeCell = collectionView.cellForItem(at: self.indexPath!) as! CalendarCellViewController
@@ -36,7 +57,7 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
         }
         
         cell.backgroundColor = UIColor.green
-        date = cell.dateNumLabel.text
+        
         
         self.indexPath = indexPath
         
