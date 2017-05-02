@@ -72,7 +72,7 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
             }
         }
         
-        if trainigDataList != nil && count > 0{
+        if count > 0{
             delegate?.relodTrainigMenu(trainigDataList: getTrainigData())
         }else{
             delegate?.relodTrainigMenu()
@@ -102,9 +102,19 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
             ddDate = "0" + ddDate
         }
         
-        if dateManager.calendarHeader(format: "yyyy/MM/dd") == dateManager.calendarHeader(format: "yyyy/MM") + "/" + ddDate{
+        let now = NSDate() // 現在日時の取得
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        let dateFormated = dateFormatter.string(from: now as Date)
+        
+        //今日の日付は背景を変更する
+        if dateFormated == dateManager.calendarHeader(format: "yyyy/MM") + "/" + ddDate{
             
+            date = cell.dateNumLabel.text
+            self.indexPath = indexPath
             cell.backgroundColor = UIColor.green
+        }else{
+            cell.backgroundColor = UIColor.white
         }
         
         
@@ -149,11 +159,13 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
     
     //月を１日進める
     public func nextMonth(){
+        self.indexPath = nil
         dateManager.nextMonthCalendar()
     }
     
     //月を１日戻す
     public func beforeMonth(){
+        self.indexPath = nil
         dateManager.preDayCalendar()
     }
     

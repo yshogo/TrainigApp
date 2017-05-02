@@ -22,9 +22,7 @@ class DailyViewController:ViewController{
         
         initCollectionDataSource()
         initTableViewDataSource()
-        
-        initData()
-        
+                
         let navigationButton = UIBarButtonItem(title: "カレンダー", style: .plain, target: self, action: nil)
         self.navigationItem.backBarButtonItem = navigationButton
     }
@@ -55,12 +53,6 @@ class DailyViewController:ViewController{
         trainingTableView.dataSource = tableViewDataSource
         
     }
-    
-    //テキストフィールドなどの初期設定
-    private func initData(){
-        
-    }
-    
     
     //次の月の表示ボタン
     @IBAction func nextButtonEvent(_ sender: Any) {

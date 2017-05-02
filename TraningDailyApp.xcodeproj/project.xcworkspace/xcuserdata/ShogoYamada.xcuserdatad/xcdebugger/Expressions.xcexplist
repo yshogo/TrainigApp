@@ -30,13 +30,10 @@
          contextName = "CalendarCollectionDataSource.collectionView(UICollectionView, cellForItemAt : IndexPath) -&gt; UICollectionViewCell:CalendarCollectionDataSource.swift">
          <PersistentStrings>
             <PersistentString
-               value = "getDate(collectionView: collectionView, indexPath: indexPath)">
+               value = "dateManager.calendarHeader(format: &quot;yyyy/MM&quot;) + &quot;/&quot; + ddDate">
             </PersistentString>
             <PersistentString
-               value = "cell">
-            </PersistentString>
-            <PersistentString
-               value = "row.date">
+               value = "dateFormated">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
