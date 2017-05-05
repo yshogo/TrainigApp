@@ -55,9 +55,8 @@ class TrainigInfoTableViewDataSource: NSObject,UITableViewDataSource,UITableView
             
             let dao = TraingDataDao()
             dao.delete(trainigData: trainigData)
-            self.delegate?.callendarCollectionView.reloadData()
+            self.delegate?.initData()
             self.delegate?.trainingTableView.reloadData()
-            
         })
         
         let editAction = UIAlertAction(title: "編集", style: .default, handler: {

@@ -94,21 +94,18 @@ class TraingDataDao{
     //データ削除
     public func delete(trainigData:TrainigData){
    
+        let predict = NSPredicate(format: "id=%@", NSNumber(value: trainigData.id))
+        fetchRequest.predicate = predict
+        
         do{
             let results = try manageContext.fetch(fetchRequest)
-            for var row in results {
-                
-                if (row as AnyObject).value(forKey: "date") as! String == trainigData.date{
-                    
-                    //データを削除する
-                    let recode = row as! NSManagedObject
-                    manageContext.delete(recode)
-                }
-                
-                //削除後データを登録し直す
-                try manageContext.save()
-            }
-
+            
+            let data = results[0] as! NSManagedObject
+            manageContext.delete(data)
+            
+            //削除後データを登録し直す
+            try manageContext.save()
+            
         }catch{
             print("検索エラー")
         }
