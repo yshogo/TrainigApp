@@ -15,6 +15,7 @@ struct TrainigData{
     var trainigMenu:String
     var weight:String!
     var num:String!
+    var id:Int!
     
     //コンストラクタ
     init(date:String,trainigMenu:String,weight:String,num:String) {
@@ -24,5 +25,7 @@ struct TrainigData{
         self.num = num
     }
  
-    
+    public mutating func setId(id:Int){
+        self.id = id
+    }
 }

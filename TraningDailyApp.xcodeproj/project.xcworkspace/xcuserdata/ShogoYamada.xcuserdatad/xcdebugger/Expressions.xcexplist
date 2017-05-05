@@ -16,6 +16,37 @@
             <PersistentString
                value = "transitionDate">
             </PersistentString>
+            <PersistentString
+               value = "transitionTrainigData">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TrainigInfoTableViewDataSource.(tableView(UITableView, didSelectRowAt : IndexPath) -&gt; ()).(closure #2):TrainigInfoTableViewDataSource.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "next?.datePickerField">
+            </PersistentString>
+            <PersistentString
+               value = "trainigData">
+            </PersistentString>
+            <PersistentString
+               value = "trainigData.date">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PostViewController.initData() -&gt; ():PostViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "transitionDate">
+            </PersistentString>
+            <PersistentString
+               value = "transitionDate != &quot;&quot;">
+            </PersistentString>
+            <PersistentString
+               value = "transitionDate != nil">
+            </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState

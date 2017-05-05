@@ -13,18 +13,35 @@ class PostViewController:ViewController{
     
     var datePicker:UIDatePicker!
     var trainigMenu:String?
+    var postMode:String?
+    
+    var transitionTrainigData:TrainigData?
     
     @IBOutlet weak var datePickerField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var numTextField: UITextField!
     @IBOutlet weak var trainigMenuTextField: UITextField!
     
+    @IBOutlet weak var titleLabel: UILabel!
+    
     //カレンダー画面からデータを取得したときにセットされる日付
     var transitionDate:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
+        //編集ボタンが入力された場合、既存データを取得する
+        if transitionTrainigData != nil {
+            datePickerField.text = transitionTrainigData?.date
+            weightTextField.text = transitionTrainigData?.weight
+            numTextField.text = transitionTrainigData?.num
+            trainigMenuTextField.text = transitionTrainigData?.trainigMenu
+        }
+        
+        if title != nil{
+            titleLabel.text = title
+        }
+        
         initDataSource()
         initData()
         
@@ -79,8 +96,10 @@ class PostViewController:ViewController{
     private func initData(){
         
         //日付の設定
-        datePickerField.placeholder = transitionDate
-        datePickerField.text = transitionDate
+        if transitionDate != nil{
+            datePickerField.placeholder = transitionDate
+            datePickerField.text = transitionDate
+        }
         self.view.addSubview(datePickerField)
         
         //トレーニングメニューの設定
@@ -110,14 +129,19 @@ class PostViewController:ViewController{
             let data = TrainigData(date: date!, trainigMenu: trainingMenu!, weight: weight!, num: num!)
             
             let dao = TraingDataDao()
-            dao.saveData(data: data)
+            
+            if self.titleLabel.text == "編集する" {
+                let id = self.transitionTrainigData?.id
+            }else{
+                dao.saveData(data: data)
+            }
             
             let completeOk:UIAlertAction = UIAlertAction(title: "YES", style: .default, handler: {
                 (action:UIAlertAction!) -> Void in
                 
-                let viewController = self.storyboard?.instantiateViewController(withIdentifier: "dailyViewController")
-                
-                self.present(viewController!,animated: false, completion: nil)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                _ = self.navigationController?.popViewController(animated: true)
+
             })
             
             self.alert(title: "完了！", messageText: "保存が完了しました", okActition: completeOk)

@@ -77,7 +77,6 @@ class TrainigPostViewController: ViewController {
         }
         
         infoViewController.trainigMenuTextField.text = selectMenu
-        
         self.navigationController?.popViewController(animated: true)
     }
     

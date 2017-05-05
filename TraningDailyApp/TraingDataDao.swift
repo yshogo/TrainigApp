@@ -34,6 +34,7 @@ class TraingDataDao{
         tranc.setValue(data.trainigMenu, forKey: "trainingMenu")
         tranc.setValue(data.weight, forKey: "weight")
         tranc.setValue(data.num, forKey: "num")
+        tranc.setValue(selectId(), forKey: "id")
         
         do {
             try manageContext.save()
@@ -58,9 +59,12 @@ class TraingDataDao{
                 let trainigMenu = row.value(forKey: "trainingMenu") as! String
                 let num = row.value(forKey: "num") as! String
                 let weight = row.value(forKey: "weight") as! String
+                let id = row.value(forKey: "id") as! Int
                 
-                arrayList.append(TrainigData(date: date, trainigMenu: trainigMenu, weight: weight, num: num))
+                var trainigdata = TrainigData(date: date, trainigMenu: trainigMenu, weight: weight, num: num)
+                trainigdata.setId(id: id)
                 
+                arrayList.append(trainigdata)
             }
             
         }catch{
@@ -70,4 +74,59 @@ class TraingDataDao{
         return arrayList
     }
     
+    //一番大きいIDを取得する
+    public func selectId() -> Int{
+        
+        let allData = getTrainigData()
+        
+        if allData.count == 1 { return 1 }
+        
+        var max:Int = 0
+        for var row in allData{
+            if row.id >= max{
+                max = row.id + 1
+            }
+        }
+        
+        return max
+    }
+    
+    //データ削除
+    public func delete(trainigData:TrainigData){
+   
+        do{
+            let results = try manageContext.fetch(fetchRequest)
+            for var row in results {
+                
+                if (row as AnyObject).value(forKey: "date") as! String == trainigData.date{
+                    
+                    //データを削除する
+                    let recode = row as! NSManagedObject
+                    manageContext.delete(recode)
+                }
+                
+                //削除後データを登録し直す
+                try manageContext.save()
+            }
+
+        }catch{
+            print("検索エラー")
+        }
+    }
+    
+    //データ更新
+    public func update(trainingMenu:TrainigData){
+        
+        delete(trainigData: trainingMenu)
+        saveData(data: trainingMenu)
+    }
+    
+    //中身のデータ確認用のメソッド
+    public func showAllData(){
+        
+        for var row in getTrainigData(){
+            
+            print("id:" + String(row.id))
+        }
+    }
 }

@@ -25,6 +25,9 @@ class DailyViewController:ViewController{
                 
         let navigationButton = UIBarButtonItem(title: "カレンダー", style: .plain, target: self, action: nil)
         self.navigationItem.backBarButtonItem = navigationButton
+        
+        let dao = TraingDataDao()
+        dao.showAllData()
     }
 
     //CollectionViewの初期設定

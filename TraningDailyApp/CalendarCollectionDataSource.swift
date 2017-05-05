@@ -159,13 +159,11 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
     
     //月を１日進める
     public func nextMonth(){
-        self.indexPath = nil
         dateManager.nextMonthCalendar()
     }
     
     //月を１日戻す
     public func beforeMonth(){
-        self.indexPath = nil
         dateManager.preDayCalendar()
     }
     

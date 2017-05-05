@@ -41,22 +41,6 @@ class TrainigInfoTableViewDataSource: NSObject,UITableViewDataSource,UITableView
     ///セルをタップしたときのクリックイベント
     func tableView(_ tableView: UITableView, didSelectRowAt IndexPath:IndexPath) {
         
-        //ここは標準のalertDialogを表示させることにする
-        let deleteAction = UIAlertAction(title: "削除", style: .default, handler: {
-            (action:UIAlertAction!) -> Void in
-            //データを削除します
-        })
-        
-        let editAction = UIAlertAction(title: "編集", style: .default, handler: {
-            (action:UIAlertAction!) -> Void in
-            //編集画面へ
-        })
-        
-        //okボタンのクリックイベント
-        let okAction = UIAlertAction(title: "ok", style: .default, handler: {
-            (action:UIAlertAction) -> Void in
-            
-        })
         
         let trainigData = trainigDataList[IndexPath.row]
         
@@ -64,7 +48,37 @@ class TrainigInfoTableViewDataSource: NSObject,UITableViewDataSource,UITableView
         
         let alert = UIAlertController(title: "登録データ", message: mesageText, preferredStyle: .alert)
         
+        //ここは標準のalertDialogを表示させることにする
+        let deleteAction = UIAlertAction(title: "削除", style: .default, handler: {
+            (action:UIAlertAction!) -> Void in
+            //データを削除します
+            
+            let dao = TraingDataDao()
+            dao.delete(trainigData: trainigData)
+            self.delegate?.callendarCollectionView.reloadData()
+            self.delegate?.trainingTableView.reloadData()
+            
+        })
         
+        let editAction = UIAlertAction(title: "編集", style: .default, handler: {
+            (action:UIAlertAction!) -> Void in
+            //編集画面へ
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let next = storyboard.instantiateViewController(withIdentifier: "postViewController") as? PostViewController
+            
+            next?.transitionTrainigData = trainigData
+            next?.title = "編集する"
+            
+            self.delegate?.navigationController?.pushViewController(next!, animated:true)
+        })
+        
+        //okボタンのクリックイベント
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: {
+            (action:UIAlertAction) -> Void in
+            
+        })
+
         alert.addAction(deleteAction)
         alert.addAction(editAction)
         alert.addAction(okAction)
