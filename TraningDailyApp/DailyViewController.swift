@@ -20,9 +20,13 @@ class DailyViewController:ViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initData()
+    }
+    
+    public func initData(){
         initCollectionDataSource()
         initTableViewDataSource()
-                
+        
         let navigationButton = UIBarButtonItem(title: "カレンダー", style: .plain, target: self, action: nil)
         self.navigationItem.backBarButtonItem = navigationButton
         

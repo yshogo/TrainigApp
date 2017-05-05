@@ -139,9 +139,13 @@ class PostViewController:ViewController{
             let completeOk:UIAlertAction = UIAlertAction(title: "YES", style: .default, handler: {
                 (action:UIAlertAction!) -> Void in
                 
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let navigationViewController = self.navigationController!
+                
+                let infoViewController = navigationViewController.viewControllers[navigationViewController.viewControllers.count - 2] as! DailyViewController
+                
+                infoViewController.initData()
+                
                 _ = self.navigationController?.popViewController(animated: true)
-
             })
             
             self.alert(title: "完了！", messageText: "保存が完了しました", okActition: completeOk)
