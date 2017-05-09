@@ -58,7 +58,6 @@ class DailyViewController:ViewController{
         
         trainingTableView.delegate = tableViewDataSource
         trainingTableView.dataSource = tableViewDataSource
-        
     }
     
     //次の月の表示ボタン

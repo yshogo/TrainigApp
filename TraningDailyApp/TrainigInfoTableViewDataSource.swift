@@ -18,9 +18,7 @@ class TrainigInfoTableViewDataSource: NSObject,UITableViewDataSource,UITableView
     ///必要なTableViewのメソッド
     ///セルの行数追加
     func tableView(_ tableView:UITableView,numberOfRowsInSection section: Int) -> Int {
-        
-        if trainigDataList == nil {return 0}
-        
+                
         return trainigDataList.count
     }
     

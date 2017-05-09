@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "PostViewController.shouldPerformSegue(withIdentifier : String, sender : Any?) -&gt; Bool:PostViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "trainigMenuTextField.isFocused">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "WeightViewController.backAction(Any) -&gt; ():WeightViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -18,6 +26,14 @@
             </PersistentString>
             <PersistentString
                value = "transitionTrainigData">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DailyViewController.postMenu(Any) -&gt; ():DailyViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "yearAndMonth + date!">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -46,14 +62,6 @@
             </PersistentString>
             <PersistentString
                value = "transitionDate != nil">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "DailyViewController.postMenu(Any) -&gt; ():DailyViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "yearAndMonth + date!">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

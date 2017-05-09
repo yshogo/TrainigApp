@@ -80,5 +80,16 @@ class TrainigPostViewController: ViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    
+    //入力ボタンクリックイベント
+    @IBAction func manualInput(_ sender: Any) {
+        
+        let navigationViewController = self.navigationController!
+        //呼び出し元にパラメータを渡す
+        let infoViewController = navigationViewController.viewControllers[navigationViewController.viewControllers.count-2] as! PostViewController
+        
+        infoViewController.manualInputWeight()
+        infoViewController.forcusFlg = true
+        
+        self.navigationController?.popViewController(animated: true)
+    }
 }

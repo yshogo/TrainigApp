@@ -27,6 +27,9 @@ class PostViewController:ViewController{
     //カレンダー画面からデータを取得したときにセットされる日付
     var transitionDate:String!
     
+    //フォーカスを解除する
+    var forcusFlg:Bool! = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -164,8 +167,25 @@ class PostViewController:ViewController{
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
         //すぐに画面遷移させるためにここでキーボードを閉じる
-        trainigMenuTextField.resignFirstResponder()
         numTextField.resignFirstResponder()
         weightTextField.resignFirstResponder()
+        if !forcusFlg{
+            trainigMenuTextField.resignFirstResponder()
+        }
+    }
+    
+    //トレーニングタイプにフォーカスを当てさせる
+    public func manualInputWeight(){
+        trainigMenuTextField.becomeFirstResponder()
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+
+        if forcusFlg == true{
+            forcusFlg = false
+            return false
+        }
+        
+        return true
     }
 }

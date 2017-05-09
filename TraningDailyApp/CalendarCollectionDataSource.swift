@@ -126,23 +126,23 @@ class CalendarCollectionDataSource: NSObject,UICollectionViewDelegate,UICollecti
             }
         }
         
-        //別の月が同じ月だと判定されてしまう不具合修正
-        if indexPath.row < 7 && ((cell.dateNumLabel.text)?.characters.count)! >= 2{
-            notCell(cell: cell)
-        }else if indexPath.row >= 30 && ((cell.dateNumLabel.text)?.characters.count)! <= 1{
-            notCell(cell:cell)
-        }
+//        //別の月が同じ月だと判定されてしまう不具合修正
+//        if indexPath.row < 7 && ((cell.dateNumLabel.text)?.characters.count)! >= 2{
+//            notCell(cell: cell)
+//        }else if indexPath.row >= 30 && ((cell.dateNumLabel.text)?.characters.count)! <= 1{
+//            notCell(cell:cell)
+//        }
         
         return cell
     }
     
-    //なにも表示しないセルを初期化させる
-    private func notCell(cell:CalendarCellViewController){
-        cell.powereLabel.text = ""
-        cell.dateNumLabel.text = ""
-        cell.isUserInteractionEnabled = false
-        cell.backgroundColor = UIColor.white
-    }
+//    //なにも表示しないセルを初期化させる
+//    private func notCell(cell:CalendarCellViewController){
+//        cell.powereLabel.text = ""
+//        cell.dateNumLabel.text = ""
+//        cell.isUserInteractionEnabled = false
+//        cell.backgroundColor = UIColor.white
+//    }
 
     //セルの場所を渡すと日付を返す
     public func getDate(indexPath:IndexPath) -> String{
