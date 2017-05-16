@@ -12,7 +12,7 @@ class TrainigMenuTableViewDelegate: NSObject,UITableViewDataSource,UITableViewDe
     
     var delegate:TrainigPostViewController!
     var dataSource:TrainigPostViewController!
-    var trainingArray:[String]! = ["ベンチプレス","ダンベルプレス"]
+    var trainingArray:[String]! = TrainingMenuData().breastArray()
     
     private var trainingMenu:String?
     

@@ -39,15 +39,18 @@ class TrainigPostViewController: ViewController {
     
     @IBAction func musclePartAction(_ sender: Any) {
         
+        let traingArrayData = TrainingMenuData()
+        
         switch (sender as AnyObject).selectedSegmentIndex {
         case 0:
-            trainigMenuTableViewDelegate?.trainingArray = ["ベンチプレス","ダンベルプレス"]
+            trainigMenuTableViewDelegate?.trainingArray = traingArrayData.breastArray()
             refreshTableView()
         case 1:
-            trainigMenuTableViewDelegate?.trainingArray = ["スクワット","レッグプレス"]
+            trainigMenuTableViewDelegate?.trainingArray = traingArrayData.legArray()
             refreshTableView()
         default:
-            trainigMenuTableViewDelegate?.trainingArray = ["デットリフト","ラットプルダウン"]
+            trainigMenuTableViewDelegate?.trainingArray = traingArrayData.backArray()
+            
             refreshTableView()
         }
     }
