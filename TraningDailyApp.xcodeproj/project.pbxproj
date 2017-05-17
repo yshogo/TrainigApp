@@ -28,9 +28,7 @@
 		19B0A3E91EAC356900817242 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0A3E81EAC356900817242 /* WeightViewController.swift */; };
 		19B26C481ECB4F6300C6E3A1 /* TrainingMenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B26C471ECB4F6300C6E3A1 /* TrainingMenuData.swift */; };
 		19E74CBD1E867E6100B9AEB7 /* TrainigMenuTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E74CBC1E867E6100B9AEB7 /* TrainigMenuTableViewDelegate.swift */; };
-		19EBDCCA1EA838CF003C4D91 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBDCC91EA838CF003C4D91 /* KeyboardViewController.swift */; };
 		19EBDCCE1EA838CF003C4D91 /* TrainigTenkey.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 19EBDCC71EA838CF003C4D91 /* TrainigTenkey.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		19EBDCD41EA8629E003C4D91 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19EBDCD31EA8629E003C4D91 /* View.xib */; };
 		19EBDCD61EA90216003C4D91 /* NumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBDCD51EA90216003C4D91 /* NumViewController.swift */; };
 		19EBDCD81EA9034B003C4D91 /* NumPickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EBDCD71EA9034B003C4D91 /* NumPickerDataSource.swift */; };
 		19FCF2C31E908BCD000C1ECE /* TrainigData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FCF2C21E908BCD000C1ECE /* TrainigData.swift */; };
@@ -103,9 +101,6 @@
 		19B26C471ECB4F6300C6E3A1 /* TrainingMenuData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingMenuData.swift; sourceTree = "<group>"; };
 		19E74CBC1E867E6100B9AEB7 /* TrainigMenuTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainigMenuTableViewDelegate.swift; sourceTree = "<group>"; };
 		19EBDCC71EA838CF003C4D91 /* TrainigTenkey.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TrainigTenkey.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		19EBDCC91EA838CF003C4D91 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
-		19EBDCCB1EA838CF003C4D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19EBDCD31EA8629E003C4D91 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		19EBDCD51EA90216003C4D91 /* NumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumViewController.swift; sourceTree = "<group>"; };
 		19EBDCD71EA9034B003C4D91 /* NumPickerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumPickerDataSource.swift; sourceTree = "<group>"; };
 		19FCF2C21E908BCD000C1ECE /* TrainigData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainigData.swift; sourceTree = "<group>"; };
@@ -182,7 +177,6 @@
 				1958C4451E7E552100306D1F /* TraningDailyApp */,
 				1958C45D1E7E552200306D1F /* TraningDailyAppTests */,
 				1958C4681E7E552200306D1F /* TraningDailyAppUITests */,
-				19EBDCC81EA838CF003C4D91 /* TrainigTenkey */,
 				1958C4441E7E552100306D1F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -306,16 +300,6 @@
 				1958C4801E7E5A2D00306D1F /* CalendarCellViewController.swift */,
 			);
 			name = cells;
-			sourceTree = "<group>";
-		};
-		19EBDCC81EA838CF003C4D91 /* TrainigTenkey */ = {
-			isa = PBXGroup;
-			children = (
-				19EBDCC91EA838CF003C4D91 /* KeyboardViewController.swift */,
-				19EBDCD31EA8629E003C4D91 /* View.xib */,
-				19EBDCCB1EA838CF003C4D91 /* Info.plist */,
-			);
-			path = TrainigTenkey;
 			sourceTree = "<group>";
 		};
 		19FCF2C11E908BA2000C1ECE /* propertys */ = {
@@ -486,7 +470,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19EBDCD41EA8629E003C4D91 /* View.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,7 +522,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19EBDCCA1EA838CF003C4D91 /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,7 +659,6 @@
 		1958C46F1E7E552200306D1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 77MXZW87XD;
 				INFOPLIST_FILE = TraningDailyApp/Info.plist;
@@ -691,7 +672,6 @@
 		1958C4701E7E552200306D1F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 77MXZW87XD;
 				INFOPLIST_FILE = TraningDailyApp/Info.plist;
